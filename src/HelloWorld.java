@@ -47,7 +47,6 @@ public class HelloWorld {
 //        int x = 4;
 //        x = x + 5;
 //        Answer:
-//        int x = 4;
 //        x += 5;
 
 //
@@ -55,8 +54,6 @@ public class HelloWorld {
 //        int y = 4;
 //        y = y * x;
 //          Answer:
-//          int x = 3;
-//          int y = 4;
 //          y *= x;
 
 //        int x = 10;
@@ -64,8 +61,6 @@ public class HelloWorld {
 //        x = x / y;
 //        y = y - x;
 //          Answer:
-//          int x = 10;
-//          int y = 2;
 //          x /= y;
 //          y -= x;
 
