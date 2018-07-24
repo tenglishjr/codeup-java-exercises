@@ -61,18 +61,29 @@ public class ConsoleExercises {
 //                - Assume that the user will enter valid numeric data for length and width.
 
         System.out.print("Enter the length of the classroom (in feet): ");
-        int classLength = sc.nextInt();
+        float classLength = sc.nextFloat();
         System.out.print("Enter the width of the classroom (in feet): ");
-        int classWidth = sc.nextInt();
-        System.out.printf("\nThe dimensions of the classroom are: %dft x %dft\n", classLength, classWidth);
+        float classWidth = sc.nextFloat();
+        System.out.print("Enter the height of the classroom (in feet): ");
+        float classHeight = sc.nextFloat();
+        System.out.printf("\nThe dimensions of the classroom are: %fft x %fft\n", classLength, classWidth);
 
 //
 //        2. Display the area and perimeter of that classroom.
 
-        int classArea = classLength * classWidth;
-        int classPerimeter = (2 * classLength) + (2 * classWidth);
+        float classArea = classLength * classWidth;
+        float classPerimeter = (2 * classLength) + (2 * classWidth);
 
-        System.out.printf("The area of the classroom is %dsqft\nThe perimeter of the classroom is %dft\n\n", classArea, classPerimeter);
+        System.out.printf("The area of the classroom is %fsqft\nThe perimeter of the classroom is %fft\n", classArea, classPerimeter);
+
+//        == Bonus ==
+
+//        - Accept decimal entries  ----> DONE
+
+//        - Calculate the volume of the rooms  ----> DONE
+        double classVolume = classArea * classHeight;
+
+        System.out.printf("The volume of the classroom is %f cubic ft\n\n", classVolume);
 
     }
 
