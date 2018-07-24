@@ -60,30 +60,30 @@ public class ConsoleExercises {
 //                - Assume that the rooms are perfect rectangles.
 //                - Assume that the user will enter valid numeric data for length and width.
 
-//        System.out.print("Enter the length of the classroom (in feet): ");
-//        float classLength = sc.nextFloat();
-//        System.out.print("Enter the width of the classroom (in feet): ");
-//        float classWidth = sc.nextFloat();
-//        System.out.print("Enter the height of the classroom (in feet): ");
-//        float classHeight = sc.nextFloat();
-//        System.out.printf("\nThe dimensions of the classroom are: %fft x %fft\n", classLength, classWidth);
+        System.out.print("Enter the length of the classroom (in feet): ");
+        float length = sc.nextFloat();
+        System.out.print("Enter the width of the classroom (in feet): ");
+        float width = sc.nextFloat();
+        System.out.print("Enter the height of the classroom (in feet): ");
+        float height = sc.nextFloat();
+        System.out.printf("\nThe dimensions of the classroom are: %.1fft x %.1fft\n", length, width);
 
 //
 //        2. Display the area and perimeter of that classroom.
 
-//        float classArea = classLength * classWidth;
-//        float classPerimeter = (2 * classLength) + (2 * classWidth);
+        float area = length * width;
+        float perimeter = (2 * length) + (2 * width);
 
-//        System.out.printf("The area of the classroom is %fsqft\nThe perimeter of the classroom is %fft\n", classArea, classPerimeter);
+        System.out.printf("The area of the classroom is %.2fsqft\nThe perimeter of the classroom is %.2fft\n", area, perimeter);
 
 //        == Bonus ==
 
 //        - Accept decimal entries  ----> DONE
 
 //        - Calculate the volume of the rooms  ----> DONE
-//        double classVolume = classArea * classHeight;
-//
-//        System.out.printf("The volume of the classroom is %f cubic ft\n\n", classVolume);
+        double volume = area * height;
+
+        System.out.printf("The volume of the classroom is %.2f cubic ft\n\n", volume);
 
 //        === EXTRA EXTRA BONUSES ===
 
