@@ -85,6 +85,47 @@ public class ConsoleExercises {
 
         System.out.printf("The volume of the classroom is %f cubic ft\n\n", classVolume);
 
+//        === EXTRA EXTRA BONUSES ===
+
+//        BONUS 1
+//        Prompt the user to enter a favorite quote
+        sc.nextLine();
+        System.out.print("Enter your favorite quote: ");
+        String favQuote = sc.nextLine();
+//        Output the quote
+        System.out.println("\"" + favQuote + "\"\n");
+//        Ask them to enter how many words are in the quote
+        System.out.print("How many words are in this quote? ");
+        int numWords = sc.nextInt();
+//        Output the number they entered
+        System.out.println("You entered " + numWords);
+//
+//        BONUS 2
+//        Prompt the user to enter a list of top three favorite foods separated by only spaces
+        System.out.println("\n\nEnter a list of your top three favorite foods (separate with spaces, NOT commas): ");
+        String firstFood = sc.next();
+        String secondFood = sc.next();
+        String thirdFood = sc.next();
+
+//        Use the printf() to output there three top foods with the format:
+//        1) FirstFood
+//        2) SecondFood
+//        3) ThirdFood
+
+        System.out.printf("Your top three favorite foods:\n1) %s\n2) %s\n3) %s\n\n", firstFood, secondFood, thirdFood);
+//
+//        BONUS 3
+//        Prompt the user to enter a grocery list of three items
+        System.out.println("Enter a grocery list of three items: ");
+//        Each item should only be separated by a comma (no spaces)
+//        You will need to use the .useDelimiter() method on your scanner object
+        sc.useDelimiter(",");
+        String itemOne = sc.next();
+        String itemTwo = sc.next();
+        String itemThree = sc.next();
+//        Output the result as a comma-separated list using printf()
+        System.out.printf("Here is your list:\n- %s\n- %s\n- %s\n\n", itemOne, itemTwo, itemThree);
+
     }
 
 }
