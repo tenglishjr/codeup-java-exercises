@@ -20,11 +20,11 @@ public class Bob {
         while (bobTalkative) {
             String statement = sc.nextLine();
 
-            if (statement.equals("")) {
+            if (statement.isEmpty()) {
                 System.out.println("Fine. Be that way!");
-            } else if (statement.contains("!")) {
+            } else if (statement.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (statement.contains("?")) {
+            } else if (statement.endsWith("?")) {
                 System.out.println("Sure.");
             } else if (statement.equalsIgnoreCase("bye")) {
                 System.out.println("Bye.");
