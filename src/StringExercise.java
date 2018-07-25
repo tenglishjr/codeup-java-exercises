@@ -23,7 +23,7 @@ public class StringExercise {
 //
 //        `I can do backslashes \, double backslashes \\,
 //        and the amazing triple backslash \\\!`
-        message = "I can do backslashes \\, double backslashes \\\\, and the amazing triple backslash \\\\\\!";
+        message = "I can do backslashes \\, double backslashes \\\\,\n and the amazing triple backslash \\\\\\!";
         System.out.println(message);
 
     }
