@@ -52,11 +52,11 @@ public class ControlFlowExercises {
 //        256
 //        65536
 
-//        double counter = 2;
+//        long counter = 2;
 //
 //        do {
-//            System.out.println((int) counter);
-//            counter = Math.pow(counter, 2);
+//            System.out.println(counter);
+//            counter *= counter;
 //        } while (counter < 1000000);
 
 
@@ -89,7 +89,7 @@ public class ControlFlowExercises {
 //        for (int i = 1; i <= 100; i++) {
 //
 //            if (i % 3 == 0 && i % 5 == 0) {
-//                System.out.println("Fizz Buzz");
+//                System.out.println("FizzBuzz");
 //            } else if (i % 5 == 0) {
 //                System.out.println("Buzz");
 //            } else if (i % 3 == 0) {
@@ -112,39 +112,29 @@ public class ControlFlowExercises {
 //        Only continue if the user agrees to.
 
         Scanner sc = new Scanner(System.in);
+        boolean userContinues = true;
 
-//        System.out.print("What number would you like to go up to? ");
-//        int userInt = sc.nextInt();
-//
-//        System.out.println("\nHere is your table!\n");
-//        System.out.println("number | squared | cubed");
-//        System.out.println("------ | ------- | -----");
-//
-//        for (int i = 1; i <= userInt; i++) {
-//            switch (String.valueOf(i).length()) {
-//                case 1:
-//                    if (String.valueOf(i * i).length() == 1) {
-//                        System.out.println(i + "      | " + i * i + "       | " + i * i * i);
-//                    } else {
-//                        System.out.println(i + "      | " + i * i + "      | " + i * i * i);
-//                    }
-//                    break;
-//                case 2:
-//                    if (String.valueOf(i * i).length() == 1) {
-//                        System.out.println(i + "     | " + i * i + "      | " + i * i * i);
-//                    } else {
-//                        System.out.println(i + "     | " + i * i + "     | " + i * i * i);
-//                    }
-//                    break;
-//                default:
-//                    if (String.valueOf(i * i).length() == 1) {
-//                        System.out.println(i + "    | " + i * i + "      | " + i * i * i);
-//                    } else {
-//                        System.out.println(i + "    | " + i * i + "     | " + i * i * i);
-//                    }
-//                    break;
-//            }
-//        }
+        do {
+            System.out.print("\nWhat number would you like to go up to? ");
+            int userInt = sc.nextInt();
+            System.out.println("\nHere is your table!\n");
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+
+            for (int i = 1; i <= userInt; i++) {
+                System.out.printf("%-7d", i);
+                System.out.print("| ");
+                System.out.printf("%-8d", i * i);
+                System.out.print("| ");
+                System.out.printf("%-9d\n", i * i * i);
+            }
+            System.out.print("\n\nWould you like to try again? (y/n)? ");
+            String response = sc.next();
+            if (!response.equalsIgnoreCase("y")) {
+                userContinues = false;
+            }
+        } while (userContinues);
+
 
 
 //        Convert given number grades into letter grades.
@@ -162,7 +152,7 @@ public class ControlFlowExercises {
 //        D : 66 - 60
 //        F : 59 - 0
 
-        boolean confirmed;
+        boolean confirmed = true;
         char letterGrade;
         int gradeNum;
 
@@ -188,11 +178,8 @@ public class ControlFlowExercises {
             System.out.print("\n\nWould you like to enter another grade? (Y/n) ");
             String answer = sc.next();
 
-            if (answer == "n") {
+            if (!answer.equalsIgnoreCase("Y")) {
                 confirmed = false;
-            } else {
-                System.out.println("=============================\n=============================");
-                confirmed = true;
             }
 
         } while (confirmed);
