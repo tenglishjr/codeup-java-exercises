@@ -161,13 +161,13 @@ public class ControlFlowExercises {
             gradeNum = sc.nextInt();
             System.out.println("\nYou entered: " + gradeNum);
 
-            if (gradeNum >= 88 && gradeNum <= 100) {
+            if (gradeNum >= 88) {
                 letterGrade = 'A';
-            } else if (gradeNum >= 80 && gradeNum <= 87) {
+            } else if (gradeNum >= 80) {
                 letterGrade = 'B';
-            } else if (gradeNum >= 67 && gradeNum <= 79) {
+            } else if (gradeNum >= 67) {
                 letterGrade = 'C';
-            } else if (gradeNum >= 60 && gradeNum <= 66) {
+            } else if (gradeNum >= 60) {
                 letterGrade = 'D';
             } else {
                 letterGrade = 'F';
