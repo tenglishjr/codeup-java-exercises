@@ -8,11 +8,14 @@ public class MethodsExercise {
 
 
         // Problem 1
-//        System.out.println(add(6, 4));
-//        System.out.println(subtract(6, 4));
-//        System.out.println(multiply(6, 4));
-//        System.out.println(divide(6, 4));
-//        System.out.println(modulus(6, 4));
+        System.out.println();
+        System.out.println(add(6, 4));
+        System.out.println(subtract(6, 4));
+        System.out.println(multiply(6, 4));
+        System.out.println(divide(6, 4));
+        System.out.println(modulus(6, 4));
+
+//        System.out.println(divide(6, 0));
 
 
         // Problem 2
@@ -70,11 +73,11 @@ public class MethodsExercise {
         int input = sc.nextInt();
         if (input >= min && input <= max) {
             return input;
-        } else {
-            System.out.println("Invalid number! Try again:");
-            return getInteger(min, max);
         }
+        System.out.print("Invalid number! Try again:");
+        return getInteger(min, max);
     }
+
 
 
 //    3. Calculate the factorial of a number.
