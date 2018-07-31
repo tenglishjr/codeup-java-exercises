@@ -1,13 +1,16 @@
 package movies;
 import util.Input;
+import java.util.Scanner;
 
 public class MoviesApplication {
+
 
     public static void main(String[] args) {
         appInit();
     }
 
     public static void appInit() {
+        Scanner sc = new Scanner(System.in);
         Input userInput = new Input();
         boolean userContinue = true;
 
@@ -24,6 +27,7 @@ public class MoviesApplication {
             System.out.println("4 - view all movies in the horror category");
             System.out.println("5 - view all movies in the scifi category");
             System.out.println("6 - view all movies in the musical category\n");
+//            System.out.println("7 - add new movie\n");
 
             int input = userInput.getInt(0, 6, "Enter your choice: ");
             System.out.println();
@@ -85,7 +89,32 @@ public class MoviesApplication {
                     }
                     System.out.println("\n======================================\n");
                     break;
+//                case 7:
+//                    System.out.println("======================================\n");
+//                    userInput.getString("Let's add a new movie! [Press ENTER]");
+//                    sc.nextLine();
+//                    String movieName = userInput.getString("Enter the movie name: ");
+//                    String movieCat = userInput.getString("Enter the category: ");
+//                    Movie[] newMovie = {new Movie(movieName, movieCat)};
+//                    addNewMovie(MoviesArray.findAll(), newMovie);
+//                    System.out.println();
+//                    System.out.println("The " + movieCat + " film \"" + movieName + "\" successfully added.\n");
+//                    System.out.println("New Movies List:\n");
+//                    for (Movie movie : MoviesArray.findAll()) {
+//                        System.out.println(movie.getName() + " -- " + movie.getCategory());
+//                    }
+//                    System.out.println("\n======================================\n");
             }
         } while (userContinue);
+    }
+
+    public static Object[] addNewMovie (Object[] array, Object[] elements) {
+        Object[] tempArray = new Object[array.length + elements.length];
+        System.arraycopy(array, 0, tempArray, 0, array.length);
+
+        for (int i = 0; i < elements.length; i++) {
+            tempArray[array.length + i] = elements[i];
+        }
+        return tempArray;
     }
 }
