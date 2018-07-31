@@ -40,14 +40,14 @@ public class Input {
     }
 
     public int getInt(int min, int max, String prompt) {
-        System.out.println(prompt);
-        System.out.print("Enter a number between " + min + " and " + max + ": ");
+        System.out.print(prompt);
+//        System.out.print("Enter a number between " + min + " and " + max + ": ");
         int userInt = scanner.nextInt();
         if (userInt >= min && userInt <= max) {
             return userInt;
         }
         System.out.println("INVALID NUMBER");
-        return getInt(min, max);
+        return getInt(min, max, prompt);
     }
 
     public int getInt() {
