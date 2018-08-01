@@ -1,6 +1,5 @@
 package movies;
 import util.Input;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -21,6 +20,18 @@ public class MoviesApplication {
                 System.out.println(movie.getName() + " -- " + movie.getCategory());
             }
         }
+    }
+
+    public static void addNewMovie(Scanner sc) {
+        userInput.getString("Let's add a new movie! [Press ENTER]");
+        sc.nextLine();
+        String movieName = userInput.getString("Enter the movie name: ");
+        String movieCat = userInput.getString("Enter the category: ");
+        Movie[] newMoviesList = Arrays.copyOf(movies, movies.length + 1);
+        int newLastIndex = movies.length - 1;
+        movies[newLastIndex] = new Movie(movieName, movieCat);
+        System.out.println();
+        System.out.println("The " + movieCat + " film \"" + movieName + "\" successfully added.\n");
     }
 
     public static void appInit() {
@@ -83,15 +94,7 @@ public class MoviesApplication {
                     break;
                 case 7:
                     System.out.println("======================================\n");
-                    userInput.getString("Let's add a new movie! [Press ENTER]");
-                    sc.nextLine();
-                    String movieName = userInput.getString("Enter the movie name: ");
-                    String movieCat = userInput.getString("Enter the category: ");
-                    Movie[] newMoviesList = Arrays.copyOf(movies, movies.length + 1);
-                    int newLastIndex = movies.length - 1;
-                    movies[newLastIndex] = new Movie(movieName, movieCat);
-                    System.out.println();
-                    System.out.println("The " + movieCat + " film \"" + movieName + "\" successfully added.\n");
+                    addNewMovie(sc);
                     System.out.println("\n======================================\n");
             }
         } while (userContinue);
