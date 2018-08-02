@@ -31,4 +31,14 @@ public class Square extends Quadrilateral implements Measurable {
         this.length = side;
         this.width = side;
     }
+
+    @Override
+    public double getPerimeter() {
+        return 4 * this.length;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.pow(this.length, 2);
+    }
 }

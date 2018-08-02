@@ -19,10 +19,16 @@ public class ShapesTest {
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
 
+        ((Rectangle) myShape).getWidth();
+        ((Rectangle) myShape).getLength();
+
         myShape = new Square(4);
 
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
+
+        ((Square) myShape).getLength();
+        ((Square) myShape).getWidth();
 
     }
 
