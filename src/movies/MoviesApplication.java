@@ -7,6 +7,7 @@ public class MoviesApplication {
 
     public static Input userInput = new Input();
     public static Movie[] movies = MoviesArray.findAll();
+    private static Scanner sc;
 
     public static void printMovies(){
         for (Movie movie : movies) {
@@ -27,7 +28,6 @@ public class MoviesApplication {
         sc.nextLine();
         String movieName = userInput.getString("Enter the movie name: ");
         String movieCat = userInput.getString("Enter the category: ");
-        Movie[] newMoviesList = Arrays.copyOf(movies, movies.length + 1);
         int newLastIndex = movies.length - 1;
         movies[newLastIndex] = new Movie(movieName, movieCat);
         System.out.println();
