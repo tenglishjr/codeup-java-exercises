@@ -17,19 +17,17 @@ public class Square extends Quadrilateral implements Measurable {
 //    }
 
     public Square(double side) {
-        super(side);
+        super(side, side);
     }
 
     @Override
-    public void setLength(double side) {
-        this.length = side;
-        this.width = side;
+    public void setLength(double length) {
+        this.length = this.width = length;
     }
 
     @Override
-    public void setWidth(double side) {
-        this.length = side;
-        this.width = side;
+    public void setWidth(double width) {
+        this.length = this.width = width;
     }
 
     @Override
@@ -39,6 +37,6 @@ public class Square extends Quadrilateral implements Measurable {
 
     @Override
     public double getArea() {
-        return Math.pow(this.length, 2);
+        return this.length * this.length;
     }
 }

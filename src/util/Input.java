@@ -18,6 +18,15 @@ public class Input {
         return scanner.nextLine();
     }
 
+    public String getSingleString() {
+        return scanner.next();
+    }
+
+    public String getSingleString(String prompt) {
+        System.out.print(prompt);
+        return scanner.next();
+    }
+
     public boolean yesNo() {
         String userResponse = scanner.next();
         return (userResponse.equalsIgnoreCase("yes") || userResponse.equalsIgnoreCase("y"));
