@@ -61,7 +61,7 @@ public class Input {
     public int getInt() {
         System.out.print("Enter a number: ");
         try {
-            return Integer.valueOf(scanner.next());
+            return Integer.valueOf(this.getString());
         } catch (NumberFormatException e) {
             e.printStackTrace();
             return getInt();
@@ -71,7 +71,7 @@ public class Input {
     public int getInt(String prompt) {
         System.out.print(prompt);
         try {
-            return Integer.valueOf(scanner.next());
+            return Integer.valueOf(this.getString());
         } catch (Exception e) {
             e.printStackTrace();
             return getInt(prompt);
@@ -101,7 +101,7 @@ public class Input {
     public double getDouble() {
         System.out.print("Enter a number: ");
         try {
-            return Double.valueOf(scanner.next());
+            return Double.valueOf(this.getString());
         } catch (NumberFormatException e) {
             e.printStackTrace();
             return getDouble();
@@ -111,7 +111,7 @@ public class Input {
     public double getDouble(String prompt) {
         System.out.print(prompt);
         try {
-            return Double.valueOf(scanner.next());
+            return Double.valueOf(this.getString());
         } catch (NumberFormatException e) {
             e.printStackTrace();
             return getDouble(prompt);
