@@ -60,12 +60,22 @@ public class Input {
 
     public int getInt() {
         System.out.print("Enter a number: ");
-        return scanner.nextInt();
+        try {
+            return Integer.valueOf(scanner.next());
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return getInt();
+        }
     }
 
     public int getInt(String prompt) {
         System.out.print(prompt);
-        return scanner.nextInt();
+        try {
+            return Integer.valueOf(scanner.next());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return getInt(prompt);
+        }
     }
 
     public double getDouble(double min, double max) {
@@ -90,12 +100,22 @@ public class Input {
 
     public double getDouble() {
         System.out.print("Enter a number: ");
-        return scanner.nextDouble();
+        try {
+            return Double.valueOf(scanner.next());
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return getDouble();
+        }
     }
 
     public double getDouble(String prompt) {
         System.out.print(prompt);
-        return scanner.nextDouble();
+        try {
+            return Double.valueOf(scanner.next());
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            return getDouble(prompt);
+        }
     }
 
 }

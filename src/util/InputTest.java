@@ -24,6 +24,10 @@ public class InputTest {
 
         System.out.println("Your number is " + input.getDouble("Let's talk Favorite Numbers!\n"));
 
+
+//        input.getInt("Favorite number? ");
+//        input.getDouble("Enter a double: ");
+
     }
 
 }
